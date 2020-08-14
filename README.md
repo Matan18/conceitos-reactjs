@@ -11,6 +11,7 @@ Esse era o segundo desafio da semana, focado no ReactJS e integração com a API
 ## Iniciar
 
 Para iniciar o projeto, você deve:
+* Ter o Node instalado, de preferência na versão LTS, e Yarn instalado também (opcional);
 * Estar rodando o Backend do projeto [Conceitos-NodeJs](https://github.com/Matan18/conceitos-nodejs);
 * Fazer o clone do repositório e rodar `yarn` ou `npm install` para instalar as dependências;
 
