@@ -4,16 +4,23 @@ import "./styles.css";
 
 function App() {
   const [projects, setProjects] = useState([])
+  const [newProject, setNewProject] = useState('');
+  const [linkNewProject, setLinkNewProject] = useState('');
+  const [techs, setTechs] = useState('');
+
   useEffect(() => {
     api.get('/repositories').then(response => {
       setProjects(response.data)
     })
   }, [])
   async function handleAddRepository() {
+    const value = techs.split(',');
+    console.log(value);
+
     const response = await api.post('/repositories', {
-      title: `Conceitos ReactJS`,
-      url: "https://github.com/Matan18",
-      techs: ["React", "Node.js", "Javascript"]
+      title: newProject,
+      url: linkNewProject,
+      techs: value
     })
     setProjects([...projects, response.data])
   }
@@ -27,6 +34,22 @@ function App() {
 
   return (
     <div>
+      <>
+        <label >Project:</label>
+        <input value={newProject} placeholder="Insira o nome do projeto" onChange={(e) => setNewProject(e.target.value)} />
+      </>
+      <br />
+
+      <>
+        <label >URL:</label>
+        <input value={linkNewProject} placeholder="Insira o link do projeto" onChange={(e) => setLinkNewProject(e.target.value)} />
+      </>
+      <br />
+      <>
+        <label >Techs:</label>
+        <input value={techs} placeholder="ReactJs, NodeJs, JavaScript" onChange={(e) => setTechs(e.target.value)} />
+      </>
+
       <ul data-testid="repository-list">
         {projects.map((project) => {
           if (project) {

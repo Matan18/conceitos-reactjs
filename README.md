@@ -1,7 +1,7 @@
 # conceitos-reactjs
 ## Challenge week 1 in GoStack from rocketseat
 
-Esse era o segundo desafio da semana, focado no ReactJS e integração com a API, na aulas foi ensinado sobre os componentes, propriedades e estados do React, é muito interessante como esse framework/lib consegue incluir as tags HTML/XML no código, e fica bem mais fácil de entender o que vai ser mostrado em tela
+Esse era o segundo desafio da semana, focado no ReactJS e integração com a API, nas aulas foi ensinado sobre os componentes, propriedades e estados do React, é muito interessante como esse framework/lib consegue incluir as tags HTML/XML no código, e fica bem mais fácil de entender o que vai ser mostrado em tela
 
 Também foi utilizado o Axios para fazer requisições HTTP para fazer a busca, adição e remoção dos projetos para exibição no browser
 
